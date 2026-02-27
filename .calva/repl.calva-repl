@@ -1,0 +1,262 @@
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; Starting Jack-in: (cd /Users/adityarajsingh/dev/myapp; lein update-in :dependencies conj '[nrepl,"1.5.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.58.0"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless)
+; Using host:port 127.0.0.1:50005 ...
+; Hooking up nREPL sessions on port 50005...
+; Connected session: clj, port: 50005
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉myapp.core꞉> 
+"Please see https://calva.io/output/#about-stdout-in-the-repl-window
+about why stdout printed to this file is prepended with `;` to be line comments."
+clj꞉myapp.core꞉> 
+; Jack-in done.
+clj꞉myapp.core꞉> 
+(square 5)
+25
+clj꞉myapp.core꞉> 
+(+ 3 5)
+8
+clj꞉myapp.core꞉> 
+(defn square [x]
+  (* x x))
+#'myapp.core/square
+clj꞉myapp.core꞉> 
+square 5
+5
+clj꞉myapp.core꞉> 
+(square 5)
+25
+clj꞉myapp.core꞉> 
+#'myapp.core/square
+clj꞉myapp.core꞉> 
+#'myapp.core/square
+clj꞉myapp.core꞉> 
+(square 5)
+50
+clj꞉myapp.core꞉> 
+#'myapp.core/invert-addition
+clj꞉myapp.core꞉> 
+#'myapp.core/invert-addition
+clj꞉myapp.core꞉> 
+(invert-addition (+ 1 2))
+((- first [data] (- 0 rest [data])))
+clj꞉myapp.core꞉> 
+#'myapp.core/invert-addition
+clj꞉myapp.core꞉> 
+(invert-addition (+ 1 2))
+((- first data (- 0 rest data)))
+clj꞉myapp.core꞉> 
+(invert-addition '(+ 1 2))
+((- first data (- 0 rest data)))
+clj꞉myapp.core꞉> 
+#'myapp.core/invert-addition
+clj꞉myapp.core꞉> 
+(invert-addition '(+ 1 2))
+; Execution error (ClassCastException) at myapp.core/invert-addition (core.clj:4).
+; class clojure.core$rest__5474 cannot be cast to class java.lang.Number (clojure.core$rest__5474 is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
+clj꞉myapp.core꞉> 
+#'myapp.core/invert-addition
+clj꞉myapp.core꞉> 
+(invert-addition '(+ 1 2))
+(- 1 -2)
+clj꞉myapp.core꞉> 
+eval((invert-addition '(+ 1 2)))
+; Execution error (ClassCastException) at myapp.core/eval10570 (repl.calva-repl:64).
+; class clojure.lang.PersistentList cannot be cast to class clojure.lang.IFn (clojure.lang.PersistentList and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉myapp.core꞉> 
+#'myapp.core/invert-addition
+clj꞉myapp.core꞉> 
+(invert-addition '(+ 1 2))
+; Execution error (ClassCastException) at myapp.core/invert-addition (core.clj:4).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉myapp.core꞉> 
+#'myapp.core/invert-addition
+clj꞉myapp.core꞉> 
+(invert-addition '(+ 1 2))
+(- #function[clojure.core/second--5478] (+ 1 2))
+clj꞉myapp.core꞉> 
+#'myapp.core/invert-addition
+clj꞉myapp.core꞉> 
+#'myapp.core/invert-addition
+clj꞉myapp.core꞉> 
+(invert-addition '(+ 1 2))
+(- 1 (- 0 2))
+clj꞉myapp.core꞉> 
+eval((invert-addition '(+ 1 2)))
+; Execution error (ClassCastException) at myapp.core/eval10583 (repl.calva-repl:86).
+; class clojure.lang.PersistentList cannot be cast to class clojure.lang.IFn (clojure.lang.PersistentList and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉myapp.core꞉> 
+; Execution error (ClassCastException) at myapp.core/eval10585 (repl.calva-repl:86).
+; class clojure.lang.PersistentList cannot be cast to class clojure.lang.IFn (clojure.lang.PersistentList and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉myapp.core꞉> 
+(eval (invert-addition '(+ 1 2)))
+3
+clj꞉myapp.core꞉> 
+(eval '(+ 1 2))
+3
+clj꞉myapp.core꞉> 
+((invert-addition '(+ 1 2)))
+; Execution error (ClassCastException) at myapp.core/eval10595 (repl.calva-repl:99).
+; class clojure.lang.PersistentList cannot be cast to class clojure.lang.IFn (clojure.lang.PersistentList and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉myapp.core꞉> 
+(invert-addition '(+ 1 2))
+(- 1 (- 0 2))
+clj꞉myapp.core꞉> 
+(+1 3)
+; Execution error (ClassCastException) at myapp.core/eval10599 (repl.calva-repl:106).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉myapp.core꞉> 
++ 13
+13
+clj꞉myapp.core꞉> 
++ 1 3
+3
+clj꞉myapp.core꞉> 
+(+ 1 3)
+4
+clj꞉myapp.core꞉> 
+(- 10 3 2 4)
+1
+clj꞉myapp.core꞉> 
+(-10 5 5 5)
+; Execution error (ClassCastException) at myapp.core/eval10605 (repl.calva-repl:122).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉myapp.core꞉> 
+(-10 50)
+; Execution error (ClassCastException) at myapp.core/eval10607 (repl.calva-repl:126).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉myapp.core꞉> 
+(-1)
+; Execution error (ClassCastException) at myapp.core/eval10609 (repl.calva-repl:130).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉myapp.core꞉> 
+(- 10 5 5 5)
+-5
+clj꞉myapp.core꞉> 
+#'myapp.core/invert-addition
+clj꞉myapp.core꞉> 
+(invert-addition (+ 1 2))
+; Execution error (IllegalArgumentException) at myapp.core/invert-addition (core.clj:4).
+; Don't know how to create ISeq from: java.lang.Long
+clj꞉myapp.core꞉> 
+(invert-addition '(+ 1 2))
+(- 1 (- 0 2))
+clj꞉myapp.core꞉> 
+(eval invert-addition '(+ 1 2))
+; Execution error (ArityException) at myapp.core/eval10618 (repl.calva-repl:146).
+; Wrong number of args (2) passed to: clojure.core/eval
+clj꞉myapp.core꞉> 
+(eval (invert-addition '(+ 1 2)))
+3
+clj꞉myapp.core꞉> 
+(eval '(+ 1 2))
+3
+clj꞉myapp.core꞉> 
+(def somethinig
+  ["adi" "okay" "something"])
+#'myapp.core/somethinig
+clj꞉myapp.core꞉> 
+(somethinig)
+; Execution error (ArityException) at myapp.core/eval10628 (repl.calva-repl:160).
+; Wrong number of args (0) passed to: clojure.lang.PersistentVector
+clj꞉myapp.core꞉> 
+something
+; Syntax error compiling at (.calva/repl.calva-repl:0:0).
+; Unable to resolve symbol: something in this context
+clj꞉myapp.core꞉> 
+somethinig
+["adi" "okay" "something"]
+clj꞉myapp.core꞉> 
+(defn error-message
+  [severity]
+  (str "OH GOD! IT'S A DISASTER! WE'RE "
+       (if (= severity :mild)
+         "MILDLY INCONVENIENCED!"
+         "DOOOOOOOMED!")))
+
+(error-message :mild)
+; Syntax error compiling at (.calva/repl.calva-repl:178:1).
+; Unable to resolve symbol: error-message in this context
+clj꞉myapp.core꞉> 
+; Syntax error compiling at (src/myapp/adi.clj:10:1).
+; Unable to resolve symbol: error-message in this context
+clj꞉myapp.adi꞉> 
+#'myapp.adi/error-message
+clj꞉myapp.adi꞉> 
+(error-message :mild)
+"OH GOD! IT'S A DISASTER! WE'RE MILDLY INCONVENIENCED!"
+clj꞉myapp.adi꞉> 
+({:a 3 :b 4} :a)
+3
+clj꞉myapp.adi꞉> 
+(:a {:a 3 :b 4})
+3
+clj꞉myapp.adi꞉> 
+(conj [1 2 3] 8 )
+[1 2 3 8]
+clj꞉myapp.adi꞉> 
+(:1 #{1 3 4})
+nil
+clj꞉myapp.adi꞉> 
+(:1 #{:1 3 4})
+:1
+clj꞉myapp.adi꞉> 
+(1 #{1 3 4})
+; Execution error (ClassCastException) at myapp.adi/eval10655 (repl.calva-repl:205).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉myapp.adi꞉> 
+(+ (inc 199) (/ 100 (- 7 2)))
+220
+clj꞉myapp.adi꞉> 
+#'myapp.core/testing
+clj꞉myapp.core꞉> 
+(testing '(+ 1 2))
+; Execution error (ClassCastException) at myapp.core/testing (core.clj:7).
+; class clojure.lang.PersistentList cannot be cast to class clojure.lang.IFn (clojure.lang.PersistentList and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉myapp.core꞉> 
+(testing '(+ 1 2))
+; Execution error (ClassCastException) at myapp.core/testing (core.clj:7).
+; class clojure.lang.PersistentList cannot be cast to class clojure.lang.IFn (clojure.lang.PersistentList and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉myapp.core꞉> 
+(testing '(+ 1 2))
+; Execution error (ClassCastException) at myapp.core/testing (core.clj:7).
+; class clojure.lang.PersistentList cannot be cast to class clojure.lang.IFn (clojure.lang.PersistentList and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉myapp.core꞉> 
+#'myapp.core/testing
+clj꞉myapp.core꞉> 
+(testing '(+ 1 2))
+; Execution error (ClassCastException) at myapp.core/testing (core.clj:7).
+; class clojure.lang.PersistentList cannot be cast to class clojure.lang.IFn (clojure.lang.PersistentList and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉myapp.core꞉> #'myapp.core/testing
+clj꞉myapp.core꞉> 
+(testing '(+ 1 2) 
+(+ 1 2)
+clj꞉myapp.core꞉> 
+(testing '(+ 1 2)) 
+"the number -->(+ 1 2) the inverted --> myapp.core$invert_addition@492fcf36(+ 1 2)"
+clj꞉myapp.core꞉> 
+(testing '(+ 1 2) 
+(+ 1 2)
+clj꞉myapp.core꞉> 
+#'myapp.core/testing
+clj꞉myapp.core꞉> 
+(testing '(+ 1 2))
+"the number -->(+ 1 2) the inverted --> (invert-addition x)"
+clj꞉myapp.core꞉> 
+(testing '(+ 1 2))
+"the number -->(+ 1 2) the inverted --> (invert-addition x)"
+clj꞉myapp.core꞉> 
+#'myapp.core/testing
+clj꞉myapp.core꞉> 
+(testing '(+ 1 2))
+"the number -->(+ 1 2) the inverted --> (- 1 (- 0 2))"
+clj꞉myapp.core꞉> 
+#'myapp.core/testing
+clj꞉myapp.core꞉> 
+(testing '(+ 1 2))
+"(+ 1 2)'S INVERSE -->(- 1 (- 0 2))3 == 3"
+clj꞉myapp.core꞉> 
+(testing '(+ 1 2))
+"(+ 1 2)'S INVERSE -->(- 1 (- 0 2))3 == 3"
+clj꞉myapp.core꞉> 
