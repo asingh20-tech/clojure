@@ -260,3 +260,34 @@ clj꞉myapp.core꞉> 
 (testing '(+ 1 2))
 "(+ 1 2)'S INVERSE -->(- 1 (- 0 2))3 == 3"
 clj꞉myapp.core꞉> 
+#'myapp.core/testing
+clj꞉myapp.core꞉> 
+(testing '(+ 1 2))
+"(+ 1 2)'S INVERSE -->(- 1 (- 0 2))\n3 == 3"
+clj꞉myapp.core꞉> 
+#'myapp.core/testing
+clj꞉myapp.core꞉> 
+(testing '(+ 1 2))
+"(+ 1 2)'S INVERSE -->(- 1 (- 0 2))\n3 == 3"
+clj꞉myapp.core꞉> 
+#'myapp.core/testing
+clj꞉myapp.core꞉> 
+(testing '(+ 1 2))
+; (+ 1 2) 'S INVERSE --> (- 1 (- 0 2)) 
+;  3  ==  3
+nil
+clj꞉myapp.core꞉> 
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; Starting Jack-in: (cd /Users/adityarajsingh/dev/myapp; lein update-in :dependencies conj '[nrepl,"1.5.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.58.0"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless)
+; Using host:port 127.0.0.1:49483 ...
+; Hooking up nREPL sessions on port 49483...
+; Connected session: clj, port: 49483
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉myapp.core꞉> 
+"Please see https://calva.io/output/#about-stdout-in-the-repl-window
+about why stdout printed to this file is prepended with `;` to be line comments."
+clj꞉myapp.core꞉> 
+; Jack-in done.
+clj꞉myapp.core꞉> 

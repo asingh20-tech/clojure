@@ -5,7 +5,7 @@
 
 (defn testing 
   [x]
-  (str
+  (println
    x  "'S INVERSE -->" (invert-addition x) "\n"
    (eval x ) " == " (eval (invert-addition x)))
   )
