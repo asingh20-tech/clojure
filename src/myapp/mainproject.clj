@@ -91,5 +91,5 @@
 
 (defn testing 
   [y h]
-  (println "diff-----> " (diff ))
-  (simplify(diff y h)))
+  (println "diff-----> " (diff y h ) "\n simplified ----> " (simplify (diff y h)))
+  )
